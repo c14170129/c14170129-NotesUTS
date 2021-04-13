@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let note of notes" [routerLink]="['./', note.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="note.imageUrl"></ion-img>
+    </ion-avatar>
+    <ion-label>{{ note.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
